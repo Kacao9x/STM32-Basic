@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"external-isr\startup_stm32f407xx.o"
+"external-isr\main.o"
+"external-isr\stm32f4xx_it.o"
+"external-isr\stm32f4xx_hal_msp.o"
+"external-isr\stm32f4xx_hal_tim.o"
+"external-isr\stm32f4xx_hal_tim_ex.o"
+"external-isr\stm32f4xx_hal_rcc.o"
+"external-isr\stm32f4xx_hal_rcc_ex.o"
+"external-isr\stm32f4xx_hal_flash.o"
+"external-isr\stm32f4xx_hal_flash_ex.o"
+"external-isr\stm32f4xx_hal_flash_ramfunc.o"
+"external-isr\stm32f4xx_hal_gpio.o"
+"external-isr\stm32f4xx_hal_dma_ex.o"
+"external-isr\stm32f4xx_hal_dma.o"
+"external-isr\stm32f4xx_hal_pwr.o"
+"external-isr\stm32f4xx_hal_pwr_ex.o"
+"external-isr\stm32f4xx_hal_cortex.o"
+"external-isr\stm32f4xx_hal.o"
+"external-isr\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "External-ISR\External-ISR.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "External-ISR.map" -o External-ISR\External-ISR.axf
